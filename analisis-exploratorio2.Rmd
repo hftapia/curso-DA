@@ -1,0 +1,83 @@
+---
+carstitle: análisis exploratorio
+author: "ht"
+date: "2025-10-23"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## cómo se hace un ploteo
+
+You can also embed plots, for example:
+
+```{r pressure}
+plot(cars)
+```
+
+```{r pressure}
+## cómo obtener una columna de una matriz
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+velocidad = cars$speed
+velocidad
+velocidad/2
+mean (velocidad)
+
+```
+
+## cómo se calcula la varianza
+
+```{r}
+sd(velocidad)
+```
+
+## generar datos a partir de opinión de expertos
+
+generalmente cuando comenzamos a trabajar en analítica de datos, carecemos de datos y métodos, sinembargo podemos generar métodos sin tener datos reales para que cuando consigmaos esos datos analicemos qué ocurriría con ellos.
+
+**Ejemplo** preguntamos a Robinson cuántos motores tiene su instalación. Tenemos 1600 motores. Vamos a genera una variable nueva, que nos indique al azar, cuántos motores están prendidos en simultáneo. el número mínimo de motores encendidos es de 800 el número máximo de motores encendidos es de 1200
+
+```{r}
+motores<- as.integer(runif(1500,800,1200))
+motores
+```
+
+## algunos gráficos
+
+```{r}
+plot(motores)
+
+```
+
+```{r}
+plot(sort(motores))
+```
+
+```{r}
+plot(sort(motores),main = "número de motores de septiembre", xlab = "Kirloskar", ylab = "motores encendidos simultáneamente")
+```
+
+```{r}
+hist(motores)
+```
