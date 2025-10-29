@@ -7,3 +7,5 @@ evaluación
 * mi primera página web
 
 <https://hftapia.github.io/curso-DA/>
+
+Cambios solucitadis por [ricardo.rpalma@gmail.com]
